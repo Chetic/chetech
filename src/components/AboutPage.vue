@@ -6,11 +6,11 @@
 
       <v-col class="mb-4">
         <h1 class="display-2 font-weight-bold mb-3">
-          Welcome
+          Welcome to Chetech
         </h1>
 
         <p class="subheading font-weight-regular">
-          Take your shoes off.
+          Software development contractor services
         </p>
       </v-col>
     </v-row>
