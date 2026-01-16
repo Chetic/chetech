@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fredrik Reveny - AI & Software Architecture Consultant specializing in secure, self-hosted AI solutions for defense and automotive industries.">
+    <meta name="keywords" content="AI consultant, agentic systems, software architecture, embedded systems, DevOps, Stockholm">
+    <meta name="author" content="Fredrik Reveny">
+
+    <title>Chetech AB - Fredrik Reveny | AI & Software Architecture Consultant</title>
+
+    <link rel="icon" type="image/png" href="chetech_colorontransparent.png">
+    <link rel="apple-touch-icon" href="chetech_colorontransparent.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <img src="chetech_colorontransparent.png" alt="Chetech AB Logo">
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#opensource">Open Source</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background">
+            <div class="circuit-traces"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-terminal">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="terminal-btn red"></span>
+                        <span class="terminal-btn yellow"></span>
+                        <span class="terminal-btn green"></span>
+                    </div>
+                    <div class="terminal-title">chetech-agent</div>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-content" id="terminal-content">
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="command" id="terminal-command"></span>
+                            <span class="cursor" id="cursor">|</span>
+                        </div>
+                        <div class="terminal-output" id="terminal-output"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">Fredrik Reveny</h1>
+                <p class="hero-subtitle">AI & Software Architecture Consultant</p>
+                <p class="hero-description">
+                    Building secure, self-hosted AI solutions for defense and automotive industries.
+                    Transforming organizations through agentic systems and modern software practices.
+                </p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                    <a href="#services" class="btn btn-secondary">View Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="about-image-wrapper">
+                        <img src="me.png" alt="Fredrik Reveny">
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="about-lead">
+                        With over 13 years of experience in software development, I specialize in bridging
+                        traditional enterprise systems with modern AI capabilities.
+                    </p>
+                    <p>
+                        My journey spans from embedded systems in mission-critical environments to leading
+                        AI transformation initiatives. I've worked extensively in defense and high-precision
+                        manufacturing, where reliability and security are paramount.
+                    </p>
+                    <p>
+                        Today, I focus on helping organizations adopt agentic AI systems that run securely
+                        in their own infrastructure—no cloud dependencies, no data leakage, just powerful
+                        AI assistants that respect your security requirements.
+                    </p>
+                    <div class="about-education">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                        </svg>
+                        <span>Uppsala University</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title centered">Services</h2>
+            <p class="section-subtitle">Expertise across the full spectrum of modern software development</p>
+
+            <div class="services-grid">
+                <div class="service-card service-card-primary">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z"/>
+                            <circle cx="7.5" cy="14.5" r="1.5"/>
+                            <circle cx="16.5" cy="14.5" r="1.5"/>
+                        </svg>
+                    </div>
+                    <h3>AI & Agentic Systems</h3>
+                    <p>
+                        Transform your development workflow with secure, offline AI assistants.
+                        I build RAG pipelines that unlock your legacy documentation and create
+                        MCP servers that connect AI to your existing tools.
+                    </p>
+                    <ul class="service-features">
+                        <li>Secure offline AI assistants</li>
+                        <li>RAG pipelines for legacy documentation</li>
+                        <li>MCP server development</li>
+                        <li>Custom agentic workflows</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                            <path d="M8 7h8M8 11h8M8 15h5"/>
+                        </svg>
+                    </div>
+                    <h3>DevOps & CI/CD Modernization</h3>
+                    <p>
+                        Modernize your build systems and automate your pipelines.
+                        From legacy systems to modern cloud-native infrastructure.
+                    </p>
+                    <ul class="service-features">
+                        <li>Build system modernization</li>
+                        <li>Pipeline automation</li>
+                        <li>Infrastructure as code</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 11l3 3L22 4"/>
+                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                        </svg>
+                    </div>
+                    <h3>Test Automation</h3>
+                    <p>
+                        Build robust test suites that catch bugs before they reach production.
+                        Expertise in Robot Framework and TDD methodologies.
+                    </p>
+                    <ul class="service-features">
+                        <li>Robot Framework expertise</li>
+                        <li>TDD methodology</li>
+                        <li>Integration testing</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>Technical Leadership</h3>
+                    <p>
+                        Guide your teams through technology transitions and build
+                        engineering cultures that deliver results.
+                    </p>
+                    <ul class="service-features">
+                        <li>Team coaching</li>
+                        <li>Developer experience</li>
+                        <li>Architecture guidance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2 class="section-title centered light">Experience</h2>
+            <p class="section-subtitle light">A track record of delivering in demanding environments</p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Saab</h3>
+                            <span class="timeline-date">2019 - Present</span>
+                        </div>
+                        <p class="timeline-role">Team Lead & Software Architect</p>
+                        <p class="timeline-description">
+                            Leading AI transformation initiatives in electronic warfare systems.
+                            Building secure, offline AI assistants for development teams working
+                            on mission-critical defense applications.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Mycronic</h3>
+                            <span class="timeline-date">2014 - 2019</span>
+                        </div>
+                        <p class="timeline-role">Software Architect</p>
+                        <p class="timeline-description">
+                            Designed and implemented microservices platform for high-precision
+                            manufacturing equipment. Led modernization of legacy systems while
+                            maintaining strict reliability requirements.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Earlier Roles</h3>
+                            <span class="timeline-date">2011 - 2014</span>
+                        </div>
+                        <p class="timeline-role">Embedded Systems Developer</p>
+                        <p class="timeline-description">
+                            Built the foundation in embedded systems development, working on
+                            real-time systems and hardware interfaces that formed the basis
+                            for my expertise in mission-critical software.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Source Section -->
+    <section class="opensource" id="opensource">
+        <div class="container">
+            <h2 class="section-title centered">Open Source</h2>
+            <p class="section-subtitle">Contributing back to the community</p>
+
+            <div class="opensource-content">
+                <div class="featured-project">
+                    <div class="project-header">
+                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                        </svg>
+                        <h3>robotframework-async</h3>
+                    </div>
+                    <p class="project-description">
+                        A library for running Robot Framework keywords asynchronously,
+                        enabling parallel test execution and improved test suite performance.
+                    </p>
+                    <div class="project-stats">
+                        <span class="stat">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            27 stars
+                        </span>
+                        <span class="stat">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M7 7v10M12 7v10M17 7v10M7 12h10"/>
+                            </svg>
+                            22 forks
+                        </span>
+                    </div>
+                    <a href="https://github.com/chetic/robotframework-async" target="_blank" rel="noopener" class="project-link">
+                        View on GitHub
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                            <polyline points="15,3 21,3 21,9"/>
+                            <line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="github-profile">
+                    <div class="arctic-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                        </svg>
+                        <span>Arctic Code Vault Contributor</span>
+                    </div>
+                    <a href="https://github.com/chetic" target="_blank" rel="noopener" class="github-link">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                        View GitHub Profile
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title centered light">Let's Work Together</h2>
+            <p class="section-subtitle light">Ready to transform your AI capabilities?</p>
+
+            <div class="contact-content">
+                <div class="contact-methods">
+                    <a href="mailto:fredrik@chetech.se" class="contact-method">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        <span>fredrik@chetech.se</span>
+                    </a>
+                    <a href="https://linkedin.com/in/fredrikreveny" target="_blank" rel="noopener" class="contact-method">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/chetic" target="_blank" rel="noopener" class="contact-method">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+
+                <div class="contact-company">
+                    <img src="chetech_colorontransparent.png" alt="Chetech AB" class="contact-logo">
+                    <p>Chetech AB</p>
+                    <p>Stockholm, Sweden</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Chetech AB. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
