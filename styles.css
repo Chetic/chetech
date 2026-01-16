@@ -545,6 +545,7 @@ ul {
 
 .service-card-primary h3 {
     color: var(--color-white);
+    font-size: 1.75rem;
 }
 
 .service-card-primary p {
