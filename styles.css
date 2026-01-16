@@ -341,6 +341,48 @@ ul {
 .terminal-btn.yellow { background: #FFBD2E; }
 .terminal-btn.green { background: #27C93F; }
 
+/* Terminal button hover states with macOS icons */
+.terminal-btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    font-weight: bold;
+    color: transparent;
+    transition: all var(--transition-fast);
+}
+
+.terminal-btn:hover {
+    transform: scale(1.1);
+}
+
+.terminal-btn.red:hover {
+    color: rgba(0, 0, 0, 0.5);
+}
+.terminal-btn.red:hover::after {
+    content: '\00D7';
+}
+
+.terminal-btn.yellow:hover {
+    color: rgba(0, 0, 0, 0.5);
+}
+.terminal-btn.yellow:hover::after {
+    content: '\2212';
+}
+
+.terminal-btn.green:hover {
+    color: rgba(0, 0, 0, 0.5);
+}
+.terminal-btn.green:hover::after {
+    content: '\002B';
+}
+
+.terminal-btn:active {
+    transform: scale(0.9);
+    filter: brightness(0.8);
+}
+
 .terminal-title {
     font-family: var(--font-mono);
     font-size: 0.8125rem;
@@ -410,6 +452,181 @@ ul {
 
 @keyframes fadeIn {
     to { opacity: 1; }
+}
+
+/* Terminal Container for WinBox */
+.hero-terminal-container {
+    position: relative;
+    width: 100%;
+    max-width: 540px;
+    min-height: 380px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Reopen Terminal Button */
+.terminal-reopen-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--color-dark);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--radius-md);
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    margin: var(--spacing-lg) auto;
+    animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.terminal-reopen-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.terminal-reopen-btn:hover {
+    background: var(--color-dark-lighter);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+@keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(26, 115, 232, 0.4); }
+    50% { box-shadow: 0 0 20px 5px rgba(26, 115, 232, 0.2); }
+}
+
+/* Minimized Terminal Dock */
+.terminal-dock {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+.terminal-dock-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--color-dark);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--radius-md);
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    box-shadow: var(--shadow-xl);
+    animation: bounceIn 0.3s ease-out;
+}
+
+.terminal-dock-item:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes bounceIn {
+    0% { transform: translateY(100px) scale(0.5); opacity: 0; }
+    60% { transform: translateY(-10px) scale(1.02); }
+    100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+/* WinBox Customization */
+.winbox {
+    background: var(--color-dark) !important;
+    border-radius: var(--radius-lg) !important;
+    box-shadow: var(--shadow-xl) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    position: absolute !important; /* Stay in place when scrolling */
+}
+
+.winbox.no-animation {
+    transition: none !important;
+}
+
+.winbox .wb-header {
+    background: var(--color-dark-lighter) !important;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.winbox .wb-title {
+    font-family: var(--font-mono) !important;
+    font-size: 0.8125rem !important;
+    color: var(--color-gray-light) !important;
+}
+
+.winbox .wb-body {
+    background: var(--color-dark) !important;
+    border-radius: var(--radius-lg) !important;
+    overflow: hidden !important;
+}
+
+/* Hide default WinBox header and controls */
+.winbox .wb-header {
+    display: none !important;
+}
+
+.winbox .wb-control {
+    display: none !important;
+}
+
+.winbox.no-header .wb-header {
+    height: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Custom terminal header inside WinBox */
+.winbox .terminal-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: 0.75rem var(--spacing-sm);
+    background: var(--color-dark-lighter);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    cursor: move;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    touch-action: none;
+    position: relative;
+    z-index: 10;
+}
+
+.winbox.dragging {
+    cursor: move !important;
+}
+
+.winbox.dragging * {
+    cursor: move !important;
+}
+
+@media (max-width: 1024px) {
+    .winbox .terminal-header {
+        cursor: default;
+    }
+}
+
+/* Maximized state */
+.winbox.max {
+    border-radius: 0 !important;
+}
+
+.winbox.max .wb-header {
+    border-radius: 0 !important;
+}
+
+.winbox.max .wb-body {
+    border-radius: 0 !important;
 }
 
 /* Hero Content */
@@ -921,7 +1138,7 @@ ul {
         text-align: center;
     }
 
-    .hero-terminal {
+    .hero-terminal-container {
         max-width: 500px;
         margin: 0 auto;
         order: 2;
