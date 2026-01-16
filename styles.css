@@ -543,11 +543,6 @@ ul {
     color: var(--color-white);
 }
 
-.service-card-primary h3 {
-    color: var(--color-white);
-    font-size: 1.75rem;
-}
-
 .service-card-primary p {
     color: var(--color-gray-light);
 }
@@ -573,6 +568,11 @@ ul {
     font-weight: 600;
     margin-bottom: var(--spacing-sm);
     color: var(--color-dark);
+}
+
+.service-card-primary h3 {
+    color: var(--color-white);
+    font-size: 1.75rem;
 }
 
 .service-card p {
