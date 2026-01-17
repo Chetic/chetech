@@ -171,6 +171,7 @@
             this.reopenBtn = document.getElementById('terminal-reopen');
             this.dockElement = null;
             this.savedPosition = null;
+            this.dragEnabled = !this.isMobile;
 
             this.init();
         }
@@ -188,10 +189,7 @@
             // Update mobile detection on resize
             window.addEventListener('resize', () => {
                 this.isMobile = this.detectMobile();
-                if (this.winbox) {
-                    // Disable/enable move based on mobile
-                    this.winbox.move = !this.isMobile;
-                }
+                this.dragEnabled = !this.isMobile;
             });
         }
 
@@ -250,17 +248,15 @@
                 background: 'transparent',
                 border: 0,
                 header: 0, // Hide default header
-                move: false, // We handle move ourselves
-                resize: false,
+                move: false, // We handle move ourselves via custom drag handler
+                resize: !this.isMobile, // Enable resize only on desktop
                 maximize: false,
                 minimize: false,
                 close: false
             });
 
-            // Make terminal header the drag handle
-            if (!this.isMobile) {
-                this.setupDragHandler();
-            }
+            // Make terminal header the drag handle (always set up, but respects dragEnabled)
+            this.setupDragHandler();
 
             // Remove no-animation class after initial render
             setTimeout(() => {
@@ -337,6 +333,8 @@
                 if (e.target.closest('.terminal-btn')) return;
                 // Only respond to left mouse button
                 if (e.button !== 0) return;
+                // Don't drag on mobile
+                if (!this.dragEnabled) return;
 
                 isDragging = true;
                 startX = e.clientX;
